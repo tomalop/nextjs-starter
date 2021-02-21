@@ -1,5 +1,5 @@
 import Posts from "../../data/posts";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
 
 const Post = ({ post }) => (
   <div className="home">
@@ -10,6 +10,7 @@ const Post = ({ post }) => (
 
 export const getStaticPaths = () => {
   // Get the paths we want to pre-render based on posts
+  console.log(Posts.length ?? 0);
   const paths = Posts.map((post) => ({
     params: { id: post.id },
   }));
@@ -20,7 +21,8 @@ export const getStaticPaths = () => {
 };
 
 export const getStaticProps = ({ params }) => {
-  const post = Posts.findOne((p) => p.id === params.id);
+  const post = JSON.stringify(Posts.find((p) => p.id === params.id));
+  console.log(post);
   return { props: { post } };
 };
 
