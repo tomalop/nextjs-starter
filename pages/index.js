@@ -1,5 +1,5 @@
-import Posts from "../data/posts";
 import PostsListViewer from "../components/mainPage/PostsListViewer";
+import Posts from "../data/posts";
 
 const Home = () => (
   <div className="home">

@@ -1,5 +1,5 @@
-import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
+import ReactMarkdown from "react-markdown";
 import posts from "../../data/posts";
 
 const Post = () => {
