@@ -4,7 +4,7 @@ const PostsListViewer = (props) => {
   return (
     <div className="home">
       {props.posts.map((post) => {
-        return <PostsListPost post={post} />;
+        return <PostsListPost post={post} key={post.id} />;
       })}
     </div>
   );
