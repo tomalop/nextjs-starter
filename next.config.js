@@ -1,5 +1,3 @@
-const posts = require("./data/posts")
-
 module.exports = {
   trailingSlash: true,
   exportPathMap: async function () {

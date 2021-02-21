@@ -33,6 +33,8 @@ export async function getStaticProps({ params }) {
 
   const result = JSON.stringify(post).toString();
 
+  // TODO: Add markdown to props
+
   // Pass post data to the page via props
   return { props: { post: result } };
 }
