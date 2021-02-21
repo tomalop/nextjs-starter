@@ -3,4 +3,4 @@ const posts = [
   { id: 2, title: "test2" },
 ];
 
-export default posts;
+module.exports = posts;

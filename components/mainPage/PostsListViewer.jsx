@@ -1,10 +1,10 @@
 import PostsListPost from "./PostsListPost";
 
-const PostsListViewer = ({ posts }) => {
+const PostsListViewer = (props) => {
   return (
     <div className="home">
-      {posts.map((post) => {
-        <PostsListPost post={post} />;
+      {props.posts.map((post) => {
+        return <PostsListPost post={post} />;
       })}
     </div>
   );

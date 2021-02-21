@@ -1,15 +1,10 @@
 import Posts from "../data/posts";
 import PostsListViewer from "../components/mainPage/PostsListViewer";
 
-const Home = ({ posts }) => (
+const Home = () => (
   <div className="home">
-    <PostsListViewer posts={posts} />
+    <PostsListViewer posts={Posts} />
   </div>
 );
-
-export const getStaticProps = () => {
-  console.log(JSON.stringify(Posts));
-  return { props: { Posts } };
-};
 
 export default Home;
