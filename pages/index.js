@@ -1,10 +1,15 @@
 import PostsListViewer from "../components/mainPage/PostsListViewer";
-import Posts from "../data/posts";
+import storedPosts from "../data/posts";
 
-const Home = () => (
+const Home = ({posts}) => (
   <div className="home">
-    <PostsListViewer posts={Posts} />
+    <PostsListViewer posts={posts} />
   </div>
 );
+
+export async function getStaticProps() {
+  // Pass post data to the page via props
+  return { props: { posts: storedPosts } };
+}
 
 export default Home;
